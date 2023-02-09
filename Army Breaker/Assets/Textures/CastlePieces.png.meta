@@ -43,7 +43,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -1301,8 +1301,8 @@ TextureImporter:
       CastlePieces_5: -1554790872
       CastlePieces_40: -2022514392
       CastlePieces_18: -321395822
-      CastlePieces_26: 1415620180
       CastlePieces_33: 1739633138
+      CastlePieces_26: 1415620180
       CastlePieces_47: -1806698622
       CastlePieces_31: 1607853164
       CastlePieces_16: 1686276401
