@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DamageStructure : MonoBehaviour
 {
+    [SerializeField] public float timeToAdd;
+    [SerializeField] public int pointsToAdd;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,9 @@ public class DamageStructure : MonoBehaviour
         if (other.gameObject.TryGetComponent<StructureHealth>(out StructureHealth structureHealth))
         {
             structureHealth.currentHealth--;
+            ScoreHandler scoreHandler = FindObjectOfType<ScoreHandler>();
+            scoreHandler.AddToComboBuilder(timeToAdd);
+            scoreHandler.AddPoints(pointsToAdd);
         }
     }
 }

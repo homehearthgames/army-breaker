@@ -24,8 +24,9 @@ public class StructureHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            DestroyReward destroyReward = GetComponent<DestroyReward>();
+            destroyReward.DistributeReward();
             Destroy(gameObject);
-            
             if (gameObject.TryGetComponent(out RemoveTileOnDestroy rtod)) {
                 Debug.Log("Got reference to the tile");
                 rtod.DestroyTile();
@@ -34,10 +35,6 @@ public class StructureHealth : MonoBehaviour
         
     }
 
-    
-    private void OnDestroy() {
-        
-    }
 
     
     public void ChangeStructureColor()
