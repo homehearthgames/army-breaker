@@ -28,11 +28,11 @@ public class ScoreHandler : MonoBehaviour
 
     private void Update()
     {
+        comboValue = SetCombo();
         currentTimer -=  timerStep * Time.deltaTime;
         currentTimer = Mathf.Clamp(currentTimer, 0, maxTimer);
         currentComboPercentage = (currentTimer / maxTimer) * 100;
         comboImage.fillAmount = currentTimer / maxTimer;
-        comboValue = SetCombo();
         
         SetText();
     }

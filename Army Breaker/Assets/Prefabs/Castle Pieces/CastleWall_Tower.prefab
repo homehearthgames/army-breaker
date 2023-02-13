@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 7372462571918392880}
   - component: {fileID: -8983423353448948373}
   - component: {fileID: 8263117669509716238}
+  - component: {fileID: 6961037101553957220}
   m_Layer: 0
   m_Name: CastleWall_Tower
   m_TagString: Brick
@@ -199,4 +200,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068b8806f88e5364f9846ab4410b0f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointReward: 5000
+  pointReward: 275
+  timeToAdd: 7
+--- !u!114 &6961037101553957220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770642100432773564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b03cd2dc5b28a48adc5b36bd3b4a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 4

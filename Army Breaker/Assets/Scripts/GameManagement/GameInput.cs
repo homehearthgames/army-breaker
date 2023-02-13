@@ -8,6 +8,7 @@ public class GameInput : MonoBehaviour
 
     private void Awake() {
         playerInputActions = new PlayerInputActions();
+        //Allow the player to start moving the paddle
         playerInputActions.Player.Enable();
     }
 

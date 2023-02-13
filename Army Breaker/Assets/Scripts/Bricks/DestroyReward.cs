@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyReward : MonoBehaviour
 {
     [SerializeField] int pointReward = 1000;
+    [SerializeField] int timeToAdd = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,12 @@ public class DestroyReward : MonoBehaviour
 
     public void DistributeReward() {
         ScoreHandler scoreHandler = FindObjectOfType<ScoreHandler>();
-        scoreHandler.AddPoints(pointReward);
+        //Use this if statement later in order to check if this is the player kingdom or not
+        //We dont want to award points or combo for destroying our own stuff
+        if (true)
+        {
+            scoreHandler.AddPoints(pointReward);
+            scoreHandler.AddToComboBuilder(timeToAdd);
+        }
     }
 }
