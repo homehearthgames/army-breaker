@@ -12,23 +12,31 @@ public class PlayerController : MonoBehaviour
 
     private bool isWalking;
 
-private void Update() {
-    Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-
-    Vector3 moveDir = new Vector3(inputVector.x, inputVector.y, 0f);
-    bool canMove = !Physics2D.Raycast(transform.position, moveDir, checkLength, layerMask);
-    if (canMove)
-    {
-        transform.position += moveDir * moveSpeed * Time.deltaTime;
-        Debug.DrawRay(transform.position, moveDir * checkLength, Color.red, 1f);
-    }
-    else
-    {
-        Debug.Log("Raycast hit an object!");
-        Debug.DrawRay(transform.position, moveDir * checkLength, Color.red, 1f);
+    private void Awake() {
+        gameInput = GameInput.Instance;
     }
 
-    isWalking = moveDir != Vector3.zero;
+    private void Update() {
+    if (gameInput != null)
+    {
+        
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+
+        Vector3 moveDir = new Vector3(inputVector.x, inputVector.y, 0f);
+        bool canMove = !Physics2D.Raycast(transform.position, moveDir, checkLength, layerMask);
+        if (canMove)
+        {
+            transform.position += moveDir * moveSpeed * Time.deltaTime;
+            Debug.DrawRay(transform.position, moveDir * checkLength, Color.red, 1f);
+        }
+        else
+        {
+            Debug.Log("Raycast hit an object!");
+            Debug.DrawRay(transform.position, moveDir * checkLength, Color.red, 1f);
+        }
+
+        isWalking = moveDir != Vector3.zero;
+    }
 
 }
 

@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 7372462571918392880}
   - component: {fileID: 7275490626903728219}
   - component: {fileID: 2968643654738894932}
+  - component: {fileID: -8589796336666277662}
   m_Layer: 0
   m_Name: CastleWall_D
   m_TagString: Brick
@@ -200,3 +201,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 0
+--- !u!114 &-8589796336666277662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770642100432773564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068b8806f88e5364f9846ab4410b0f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointReward: 100
+  timeToAdd: 5

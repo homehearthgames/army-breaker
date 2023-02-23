@@ -6,6 +6,10 @@ public class GameOverState : GameBaseState
 {
     public override void EnterState(GameStateManager state)
     {
+        Debug.Log("Entered Over State");
+        state.GetScoreHandler();
+        GameManager.Instance.timeElapsed = 0;
+        state.scoreHandler.score = 0;
     }
     public override void UpdateState(GameStateManager state)
     {

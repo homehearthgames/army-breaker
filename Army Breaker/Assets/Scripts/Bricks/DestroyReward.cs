@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DestroyReward : MonoBehaviour
 {
-    [SerializeField] int pointReward = 1000;
-    [SerializeField] int timeToAdd = 3;
+    [SerializeField] int pointReward = 100;
+    [SerializeField] int timeToAdd = 5;
     // Start is called before the first frame update
     void Start()
     {

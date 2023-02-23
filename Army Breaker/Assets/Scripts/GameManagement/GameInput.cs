@@ -5,8 +5,18 @@ using UnityEngine;
 public class GameInput : MonoBehaviour
 {
     private PlayerInputActions playerInputActions;
+    
+    public static GameInput Instance { get; private set; }
 
     private void Awake() {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+        
         playerInputActions = new PlayerInputActions();
         //Allow the player to start moving the paddle
         playerInputActions.Player.Enable();
