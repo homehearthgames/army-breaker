@@ -28,6 +28,7 @@ public class GameWonState : GameBaseState
         Debug.Log("Score for this level: " + state.scoreHandler.score);
         GameManager.Instance.timeElapsed = 0;
         state.scoreHandler.score = 0;
+        state.isPaused = true;
     }
     public override void UpdateState(GameStateManager state)
     {
@@ -36,5 +37,6 @@ public class GameWonState : GameBaseState
     public override void ExitState(GameStateManager state)
     {
         
+        state.isPaused = false;
     }
 }

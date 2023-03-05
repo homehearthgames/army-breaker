@@ -13,6 +13,7 @@ public class GameStateManager : MonoBehaviour
     public string currentLevelName;
     public ScoreHandler scoreHandler;
     public KingController kingController;
+    public bool isPaused;
 
     public Scene gameScene;
     public string gameSceneName;

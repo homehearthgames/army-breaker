@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d55dd756deb634db1eaab1b6c438d7, type: 3}
+  m_Name: LevelSO_A1
+  m_EditorClassIdentifier: 
+  levelComplete: 0
+  gameGrid: {fileID: 8576278556310842543, guid: 2c9b8ead465d2e84a93b8aa3c2177d16, type: 3}
+  levelPreviewImage: {fileID: 21300000, guid: b3b9703cb0bfbb04cb42195bf3ba1829, type: 3}
+  levelTitleText: A1
+  timeAttackComplete: 0
+  timeAttackTime: 600
+  bronzeMedalTitleText: 
+  bronzeMedalDescriptionText: 
+  silverMedalTitleText: 
+  silverMedalDescriptionText: 
+  bronzeMedalPointRequirement: 1000
+  silverMedalPointRequirement: 5000
+  goldMedalPointRequirement: 20000
+  goldMedalTitleText: 
+  goldMedalDescriptionText: 
+  bronzeMedalEarned: 0
+  silverMedalEarned: 0
+  goldMedalEarned: 0

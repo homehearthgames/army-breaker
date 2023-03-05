@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class StructureHealth : MonoBehaviour
 {
-    [SerializeField] int maxHealth;
-    [SerializeField] public int currentHealth;
+    [SerializeField] public int maxHealth = 1;
+    [SerializeField] public int currentHealth = 1;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Color color;
+    [SerializeField] GameObject smokeParticles;
 
     void Awake()
     {
@@ -32,7 +33,6 @@ public class StructureHealth : MonoBehaviour
                 rtod.DestroyTile();
             }
         }
-        
     }
 
 
@@ -41,5 +41,12 @@ public class StructureHealth : MonoBehaviour
     {
         float ratio = 1 - ((float)currentHealth / maxHealth);
         spriteRenderer.color = new Color(1 - ratio, 1 - ratio, 1 - ratio);
+        if (currentHealth == 1 && maxHealth != 1)
+        {
+            if (smokeParticles != null)
+            {
+                smokeParticles.SetActive(true);
+            }
+        }
     }
 }

@@ -28,6 +28,10 @@ public class ScoreHandler : MonoBehaviour
 
     private void Update()
     {
+        if (GameStateManager.Instance.isPaused)
+        {   
+            return;
+        }
         comboValue = SetCombo();
         currentTimer -=  timerStep * Time.deltaTime;
         currentTimer = Mathf.Clamp(currentTimer, 0, maxTimer);

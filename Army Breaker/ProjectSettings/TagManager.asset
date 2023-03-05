@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Brick
   - Paddle
+  - Ball
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - Walls
   - Environment
-  - 
+  - Sword
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
   - name: Ground
     uniqueID: 3096472069
     locked: 0
+  - name: Water
+    uniqueID: 2222382817
+    locked: 0
   - name: Castle Walls
     uniqueID: 3481140861
     locked: 0
@@ -54,4 +58,10 @@ TagManager:
     locked: 0
   - name: Boundary Walls
     uniqueID: 2038911745
+    locked: 0
+  - name: Environment
+    uniqueID: 918267811
+    locked: 0
+  - name: Particles
+    uniqueID: 968478055
     locked: 0

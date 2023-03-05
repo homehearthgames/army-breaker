@@ -11,14 +11,19 @@ public class GamePlayState : GameBaseState
         Debug.Log("Entered Play State");
         if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("GameScene"))
         {
-            SceneManager.LoadScene("GameScene");
-            Debug.Log("Loading Scene " + SceneManager.GetSceneByName("GameScene").name);
-            state.StartCoroutine(WaitForSceneToLoad());
+            LoadGameScene(state);
         }
         else
         {
             Debug.Log("Entered Scene " + SceneManager.GetActiveScene().name);
         }
+    }
+
+    public void LoadGameScene(GameStateManager state)
+    {
+        SceneManager.LoadScene("GameScene");
+        Debug.Log("Loading Scene " + SceneManager.GetSceneByName("GameScene").name);
+        state.StartCoroutine(WaitForSceneToLoad());
     }
 
     IEnumerator WaitForSceneToLoad()
@@ -29,6 +34,7 @@ public class GamePlayState : GameBaseState
         {
             yield return null;
         }
+        Debug.Log("loading scene");
         GameManager.Instance.InstantiateLevel();
         GameStateManager.Instance.GetKingController();
         

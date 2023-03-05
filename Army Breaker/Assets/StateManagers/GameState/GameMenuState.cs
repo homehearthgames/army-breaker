@@ -25,6 +25,8 @@ public class GameMenuState : GameBaseState
             yield return null;
         }
         GameManager.Instance.currentLevelController.CompleteLevel(GameStateManager.Instance.currentLevelName, GameManager.Instance.currentLevelController.levelComplete, GameManager.Instance.currentLevelController.bronzeMedal, GameManager.Instance.currentLevelController.silverMedal, GameManager.Instance.currentLevelController.goldMedal, GameManager.Instance.currentLevelController.timeAttackMedal);
+        
+        GameManager.Instance.timeElapsed = 0f;
     }
 
     public override void UpdateState(GameStateManager state)
